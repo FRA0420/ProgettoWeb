@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Benvenuti nel Nostro sito!</h1>
+    <p>
+        Compilando la registrazione sottostante
+        avrai accesso alla nostra piattaforma
+    </p>
+    <h2>Crea un Nuovo Account</h2><br>
+    <form method="post">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="cognome" placeholder="Cognome"><br>
+        <input type="text" name="mail" placeholder="Inserisci il tuo indirizzo mail"><br><br>
+        <input type="radio" name="sesso" value="Uomo">Uomo
+        <input type="radio" name="sesso" value="Donna">Donna<br><br>
+
+        Come hai conosciuto il nostro sito?
+        <select>
+        <option value="C">Consigliato da amici</option>
+        <option value="I">Internet</option>
+        <option value="SN">Social Network</option>
+        <option value="A">Altro</option>
+        </select><br>
+        <h2>Parlaci di te!</h2><textarea name="Parlaci di te" rows="4" cols="30"></textarea>
+        <br><br>
+        <input type="checkbox" name="Ac" value="Accetto le condizioni d'uso">Accetto le <a href="Condizioni d'Uso">Condizioni d'Uso</a><br><br>
+        <!-- SUBMIT -->
+        <input type="submit" name="account" value="Crea Account"> 
+    </form>
+</body>
+</html>
