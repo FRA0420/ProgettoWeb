@@ -1,0 +1,15 @@
+5 tipi di variabili:
+	string -> #template string (` = altgr + ' )
+	` ${nominativo} ${nominativo2} sono miei amici`
+	
+	\ -> backslash è l'escape ci permette di aggiungere i 
+	caratteri speciali come in python
+	
+	
+	number -> quando si lavora in html tutti i dati inseriti 
+	risulteranno come stringhe perciò in javascript serve
+	convertire il tipo e ci sono due funzioni:
+		parseInt(x)
+		parseFloat(x)
+		
+	booleani -> o true o false

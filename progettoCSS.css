@@ -1,0 +1,28 @@
+.green {background-color: aquamarine;
+}
+
+.grigio {background-color: grey;padding: 5 10 5 10;
+}
+
+.tabella {background-color: white;
+}
+
+.dispo {color: green;
+}
+
+.info {font-weight: 700;
+}
+
+.space {padding-left: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+    height: 100%;
+    margin: auto;
+}

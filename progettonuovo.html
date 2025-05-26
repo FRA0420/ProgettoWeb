@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function controllo(event) {
+            event.preventDefault(); 
+            
+            let y = document.getElementById("messaggio");
+            let x = document.getElementById("cognome").value;
+            let n = document.getElementById("nome").value;
+            let m = document.getElementById("matricola").value;
+            let r = document.getElementById("regione")
+            let e = document.getElementById("email").value;
+            let t = document.getElementById("telefono").value;
+            
+            if (x==""){
+                
+                y.innerHTML="ERRORE CAMPO OBBLIGATORIO";                      
+            } 
+          
+            if (n=="") {
+
+                y.innerHTML="ERRORE CAMPO OBBLIGATORIO";
+            } 
+            
+            if (m == "") {
+                
+                y.innerHTML="ERRORE CAMPO OBBLIGATORIO";
+            } 
+            if (r == "s") {
+               
+                y.innerHTML="ERRORE CAMPO OBBLIGATORIO";}
+
+            if (m == "" || isNaN(m)) {
+               
+                y.innerHTML = "Il campo 'Matricola' deve contenere solo numeri";
+            } 
+
+            if (e == "" && t == "") {
+                
+                y.innerHTML = "Inserisci almeno l'Email o il Telefono.";
+            }
+
+            
+            else {
+                alert("Form inviato con successo!");
+                document.getElementById("formRegistrazione").submit();}
+
+
+            }
+
+
+    </script>
+</head>
+<body>
+    <form id="formRegistrazione" style="background-color: whitesmoke; padding: 20px; width: fit-content; margin: auto;">
+        <h4>Registrati</h4>
+        COGNOME:<input type="text" name="cognome" placeholder="Cognome" id="cognome" maxlength="40">
+        <br>
+        NOME:<input type="text" name="nome" placeholder="Nome" id="nome" maxlength="30"><br>
+
+        MATRICOLA:<input type="text" name="matricola" placeholder="Matricola" id="matricola" maxlength="12"><br>
+        REGIONE: <select name="Regione" placeholder="Regione" id="regione"><br>
+            <option value="L">Lombardia</option>
+            <option value="LA">Lazio</option>
+            <option value="NA">Campania</option>
+            <option value="VE">Veneto</option>
+            <option value="E">Emilia-Romagna</option>
+            <option value="FR">Friuli Venenzia-Giulia</option>
+            <option value="PI">Piemonte</option>
+            <option value="LIG">Liguria</option>
+            <option value="A">Abruzzo</option>
+            <option value="MA">Marche</option>
+            <option value="SI">Sicilia</option>
+            <option value="SA">Sardegna</option>
+            <option value="P">Puglia</option>
+            <option value="M">Molise</option>
+            <option value="B">Basilicata</option>
+            <option value="T">Toscana</option>
+            <option value="TR">Trentino Alto-Adige</option>
+            <option value="U">Umbria</option>
+            <option value="V">Valle d'Aosta</option>
+            <option value="CA">Calabria</option>
+            </select>  <br>
+              
+        E-MAIL:<input type="text" name="email" id="email" placeholder="E-mail" maxlength="30"><br>
+        TELEFONO:<input type="text" name="telefono" placeholder="Telefono" id="telefono" maxlength="40"><br>
+        RICHIESTE PARTICOLARI: <br><textarea name="richieste particolari" placeholder="Richieste Particolari" rows="12" cols="60"></textarea><br>
+        <input type="button" onclick="controllo(event)" value="INVIA">
+        <h1 id="messaggio" style="color: red;"></h1>
+
+   </form> 
+    
+</body>
+</html>

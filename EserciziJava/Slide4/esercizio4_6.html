@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="for"></div>
+    <script>
+        let x = [3,6,17,16,30];
+        let somma = 0;
+        let media = 0;
+        for (let indice in x){
+            somma += x[indice];
+        }
+        media = somma/x.length;
+        let frase = `La somma totale è: ${somma}, mentre la media è: ${media}`;
+        document.getElementById("for").innerHTML=frase;
+    </script>
+</body>
+</html>

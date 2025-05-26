@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="var1"></div>
+    <div id="var2"></div>
+    <div id="var3"></div>
+    
+
+    <script>
+        let x = 10;
+        let y = x;
+        let z = "Chiara";
+        let x1 = typeof x;
+        let y1 = typeof y;
+        let z1 = typeof z;
+        let frase1 = `Valore variabile -> ${x}. Tipo di dato: ${x1}`;
+        let frase2 = `Valore variabile -> ${y}. Tipo di dato: ${y1}`;
+        let frase3 = `Valore variabile -> ${z}. Tipo di dato: ${z1}`;
+
+        document.getElementById("var1").innerHTML = frase1;
+        document.getElementById("var2").innerHTML = frase2;
+        document.getElementById("var3").innerHTML = frase3;
+    </script>
+</body>
+</html>

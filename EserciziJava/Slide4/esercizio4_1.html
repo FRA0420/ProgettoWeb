@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tabellina"></div>
+    <div id="tabellina2"></div>
+    <script>
+        let x = 5;
+        let cont = 1;
+        let risultato_while = ``;
+        while (cont <= 10){
+            risultato_while += `${x}x${cont} = ${x*cont} <br>`;
+            cont++;
+        }
+        document.getElementById("tabellina").innerHTML=`Tabellina con while:<br> ${risultato_while}`;
+        ;
+        let y = 7;
+        let conti = 1;
+        let risultato_for=``;
+        for (conti; conti <= 10; conti++){
+            risultato_for += `${y}x${conti} = ${y*conti} <br>`;
+        }
+        document.getElementById("tabellina2").innerHTML=`Tabellina con for: <br> ${risultato_for}`;
+
+        
+    </script>
+</body>
+</html>

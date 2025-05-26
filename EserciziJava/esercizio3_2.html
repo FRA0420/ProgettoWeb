@@ -1,0 +1,31 @@
+<!-- Scrivere un programma che dichiara e valorizza una variabile con l'anno corrente 
+e un’altra variabile con il proprio anno di nascita e determini:
+    l’età  della persona
+    quanti anni sono necessari per raggiungere i 100
+  Restituisca in output entrambi i risultati. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <div id="var1"></div>
+    <div id="var2"></div>
+    
+    <script>
+        let anno = 2025;
+        let anno_nascita = 1998;
+        let eta = anno - anno_nascita;
+        let anni_morte = 100 - eta;
+        let frase1 = `Ho ${eta} anni.`;
+        let frase2 = `Mi mancano ${anni_morte} per raggiungere i 100 anni.`;
+        
+        document.getElementById("var1").innerHTML = frase1;
+        document.getElementById("var2").innerHTML = frase2;
+    </script>
+  </body>
+  </html>

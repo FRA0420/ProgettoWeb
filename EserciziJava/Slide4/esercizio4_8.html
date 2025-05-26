@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="for"></div>
+    
+    <script>
+        let numeri = [3,6,17,16,30,31,28,45,60,9];
+        let pari = 0;
+        let dispari = 0;
+        for(let indice=0;indice<numeri.length;indice++){
+            if (numeri[indice]%2==0){
+                pari++;}
+            else {
+                dispari++;
+            }     
+        }
+        let frase = `ci sono ${pari} numeri pari e ${dispari} numeri dispari`;
+        document.getElementById("for").innerHTML=frase;
+    </script>
+</body>
+</html>

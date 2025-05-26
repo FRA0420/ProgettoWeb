@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="for"></div>
+    
+    <script>
+        let numeri = [3,6,17,16,30,31,28];
+        
+        let risultato = numeri[0];
+        
+        for (let indice=1; indice < numeri.length; indice++){
+            if (numeri[indice] > risultato){
+                risultato = numeri[indice];
+            }
+        }
+        
+        let frase = `Il numero più grande è ${risultato}`;
+        
+        document.getElementById("for").innerHTML=frase;
+    </script>
+</body>
+</html>

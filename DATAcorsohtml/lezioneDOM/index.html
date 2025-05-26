@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.getElementById("paperino").innerHTML = "CIAO CIAO";
+
+        // INIZIA JAVASCRIPT ... script ... 
+        function test() {
+            // server remoto utenti
+            document.body.style.backgroundColor='green'; // DOM 
+
+            let x = document.getElementById("miotitolo"); // SOLO COSI SI RECUPERA L'ELEMENTO 
+
+            x.style.backgroundColor = "grey";   // MODIFICARE CSS
+            x.innerHTML = "ARRIVEDERCI";        // MODIFICARE CONTENUTO
+            x.setAttribute("align", "center");  // CREA ATTRIBUTO
+
+            let y = document.createElement("h1");
+            y.innerHTML = "Lista Utenti";
+            y.style.color = "pink";
+
+            let z = document.getElementById("paperino");
+            z.append(y);
+
+            let valore = document.getElementById("nominativo").value;
+
+            if( valore == "") {
+                // DOM messaggio di errore
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="paperino">
+        Internet (Web) ... DOM (Browser... 3 html / css / javascript)
+
+        HTML : Linguaggio posiziona gli elementi
+        CSS  : Linguaggio grafico   ... style e class
+        DOM  : Libreria... dentro il browser ... modificare html dinamicamente
+
+                document ( attributi... variabili  e funzioni... azioni() )
+                
+                HTML : EVENTI (mouse e tastiera) -> onclick
+
+                Come posso usare il DOM ? HTML -> DOM
+                                          HTML -> JS -> DOM
+
+        JS : inline (NON SI USA) ... blocco 
+
+
+        DOM :   1 Recupero l'elemento
+                2 Decido : modificare CSS
+                           gestire attributi
+                           creare nuovi elementi
+                           modificare il contenuto
+
+    </h1>
+
+        <h1 onclick="document.body.style.backgroundColor='red'"><a href="#">Clicca qui</a></h1>
+        <h1 onclick="test()" id="miotitolo">Clicca qui JS</h1>
+        <input type="text" name="nome" id="nome">
+    </body>
+</html>

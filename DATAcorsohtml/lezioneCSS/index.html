@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-image: linear-gradient(red, yellow);
+        }
+        /* direttamente sul tag :classi generiche*/
+        h1 {
+            color : rgb(27, 231, 27);
+            background-color: yellow;
+        }
+
+        /* classi personalizzate ... PUNTO */
+        .titolonews {
+            color : violet;
+            background-color: black;
+            font-family: verdana;
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        .coloregrigio {
+            color : grey;
+        }
+    </style>
+
+    <link href="miostile.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+        CSS : Linguaggio ... nato dopo l'html 
+        aggiungere 2 attributi : style e class ... CSS
+
+        Cascade Style Sheet ... Foglio di stile a cascata ... 
+
+        CSS può essere scritto in 3 modi :
+
+        1 - INLINE      : all'interno del tag ... attributo style
+
+        2 - BLOCCO      : all'interno della pagina ... TAG <style> (all'interno dell'head)
+
+        3 - FILE ESTERNO : class
+
+        esadecimale : 
+
+    -->
+    <h1><font color="red">Titolo della pagina</font></h1>
+
+    <h1 style="color : #45FF43">Titolo della pagina CSS inline</h1>
+    <h1 class="titolonews"style=" margin-top : 250px">Titolo della pagina CSS</h1>
+
+    <div class="titolonews" style="padding : 30px; margin : 0px ; border : 10px orange solid; border-radius: 60px;"> descrizione della news </div>
+    <div class="paperino coloregrigio">scritta paperino</div>
+</body>
+</html>

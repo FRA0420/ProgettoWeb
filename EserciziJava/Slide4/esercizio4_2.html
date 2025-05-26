@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="while"></div>
+    <div id="for"></div>
+    <script>
+        let ris_while = ``;
+        let ris_for = ``;
+        let cont1 = 0;
+        let cont2 = 0;
+        while (cont1 < 11){
+            ris_while += `${cont1} <br>`;
+            cont1++;
+        }
+        document.getElementById("while").innerHTML=`Risultato con while: <br> ${ris_while}`;
+
+        for (cont2; cont2<=10;cont2++){
+            ris_for += ` ${cont2} <br>`;
+        }
+        document.getElementById("for").innerHTML=`Risultato con for: <br> ${ris_for}`
+    </script>
+</body>
+</html>
