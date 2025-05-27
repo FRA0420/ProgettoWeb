@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Gioco: indovina il numero!</h1>
+    <div align="center">
+        <textarea id="tentativo">
+
+        </textarea>
+        <button>Controlla</button>
+        <div align="right" id="ciao"></div>
+    </div> 
+    <div align="center">
+        <h4>Tentativi: </h4>
+        <textarea id="conteggio"></textarea>
+    </div>
+    <div align="center">
+        <button>Nuovo Gioco</button>
+    </div>
+
+    <script>
+        let cont = 0;
+        function generaNumeroCasuale(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let numeroCasuale = generaNumeroCasuale(1, 100);
+        ;
+        function tentativo() {
+            let num = document.getElementById("tentativo").textContent;
+            let num1 = parseInt(num);
+            if (num1>numeroCasuale){
+                return "é più grande";
+            } else if (num1<numeroCasuale) {
+                return "è più piccolo";
+            } else {
+                return "Hai indovinato!!";
+            }
+            }
+        let risultato = tentativo();
+        document.getElementById("ciao").innerHTML=risultato;
+
+        
+    </script>
+</body>
+</html>

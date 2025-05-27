@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="risultato"></div>
+    <div id="risultato2"></div>
+    <script>
+        function intero(num1) {
+            if (1<=num1 && num1<=7){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let r = intero(6);
+        document.getElementById("risultato").innerHTML=r;
+        
+        function giorno() {
+            let settimana = prompt("Inserisci un numero: ");
+            let int = parseInt(settimana);
+            if (intero(int)) { 
+                switch (int) {
+                case 1:
+                    return "è lunedi";
+                case 2:
+                    return "è martedi";
+                case 3:
+                    return "è mercoledi";
+                case 4:
+                    return "è giovedi";
+                case 5:
+                    return "è venerdi";
+                case 6:
+                    return "è sabato";
+                case 7:
+                    return "è domenica";
+            }
+
+            } else {
+                return "Non sono riuscita a trovare un giorno";   
+            }
+        }
+        let output = giorno();
+        document.getElementById("risultato2").innerHTML=output;
+    </script>
+</body>
+</html>
