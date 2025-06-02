@@ -8,34 +8,31 @@
 <body>
     <h1 align="center"> Gioco: indovina il numero!</h1>
     <div align="center">
-        <textarea id="tentativo">
+        <input type="text" id="tentativo" placeholder="Inserisci un numero">
 
-        </textarea>
-        <button>Controlla</button>
-        <div align="right" id="ciao"></div>
+        <button onclick="controllaNumero()">Controlla</button>
     </div> 
-    <div align="center">
-        <h4>Tentativi: </h4>
-        <textarea id="conteggio"></textarea>
-    </div>
-    <div align="center">
-        <button>Nuovo Gioco</button>
-    </div>
-
+    <div> <h4>Tentativi: <input type="text" id="conteggio" value="0" readonly></h4></div> 
+    <div> <button onclick="nuovoGioco()">Nuovo gioco</button></div> 
+    
     <script>
-        let cont = 0;
-        function generaNumeroCasuale(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
+        let cont = 0
+        let numeroCasuale;
+        document.getElementById("conteggio").innerHTML=cont;
+        
+        function generaNumeroCasuale() {
+            numeroCasuale=Math.floor(Math.random() * 101);  // genera numeri casuali da 0 a 100 compresi
         }
 
-        let numeroCasuale = generaNumeroCasuale(1, 100);
         ;
         function tentativo() {
             let num = document.getElementById("tentativo").textContent;
             let num1 = parseInt(num);
             if (num1>numeroCasuale){
+                cont++;
                 return "é più grande";
             } else if (num1<numeroCasuale) {
+                cont++;
                 return "è più piccolo";
             } else {
                 return "Hai indovinato!!";

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcolatrice</title>
+</head>
+<body>
+
+  <h1>Calcolatrice</h1>
+
+  
+  <div>Inserisci un numero<input type="number" id="numero1"></div>
+
+  <div>Inserisci un secondo numero <input type="number" id="numero2"></div>
+
+  <div>Che operazione vuoi fare?
+  <select id="operazione">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select></div>
+
+  <button onclick="calcola()">Calcola</button>
+  <div>
+  <h2 id="risultato">Risultato:</h2></div>
+
+  <script>
+    function calcola() {
+        let num1 = parseFloat(document.getElementById('numero1').value);
+        let num2 = parseFloat(document.getElementById('numero2').value);
+        let operazione = document.getElementById('operazione').value;
+        let risultato;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        risultato = "Inserisci entrambi i numeri.";
+      } else {
+        switch (operazione) {
+          case '+':
+            risultato = num1 + num2;
+            break;
+          case '-':
+            risultato = num1 - num2;
+            break;
+          case '*':
+            risultato = num1 * num2;
+            break;
+          case '/':
+            risultato = num2 !== 0 ? (num1 / num2) : "Divisione per zero non consentita";
+            break;
+          default:
+            risultato = "Operazione non valida";
+        }
+      }
+
+      document.getElementById('risultato').innerHTML = risultato;
+    }
+  </script>
+
+</body>
+</html>
