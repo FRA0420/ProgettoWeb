@@ -1,0 +1,17 @@
+DNS-> domain name system
+
+record A-> per l'ip v4
+record AAAA-> per l'ip v6
+record CNAME-> per cambiare l'alias del dominio (se troppo lugo/brutto ecc)
+recordo XMAIL-> serve per le mail -> per cambiare pr esempio da gmail.com a macciocchi.com devo chiedere di cambiare dominio 
+
+www.rob.it 
+
+si parte a leggere dal .it che è il TLD ovvero il dominio di primo livello che identificano l'aerea geografica (anche .eu)
+altri domini di primo livello che identificano attivita commerciali .com
+rob.it = dominio di secondo livello > la coppia deve essere univoca
+www = dominio di terzo livello o sottodominio 
+app = dominio terzo livello per le web application
+API = dove vengono esposte le API REST
+STAGING = si duplica il sito di emissione, si modifica e si rimanda
+
